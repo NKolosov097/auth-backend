@@ -2,7 +2,8 @@ import { body } from "express-validator"
 
 export const registerValidation = [
   body("email", "Неверный формат почты").isEmail(),
-  body("fullName", "Укажите имя и фамилию").isLength({ min: 3 }),
+  body("firstName", "Укажите имя").isLength({ min: 3 }),
+  body("lastName", "Укажите фамилию").isLength({ min: 3 }),
   body("password", "Пароль должен быть минимум 7 символов").isLength({
     min: 7,
   }),

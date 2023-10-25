@@ -7,7 +7,11 @@ const UserSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    fullName: {
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
       type: String,
       required: true,
     },
@@ -18,6 +22,7 @@ const UserSchema = new mongoose.Schema(
     mobilePhone: {
       type: String,
       required: true,
+      unique: true,
     },
     address: String,
     avatarURL: String,
